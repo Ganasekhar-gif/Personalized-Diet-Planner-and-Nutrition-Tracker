@@ -1,0 +1,2117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingClass">
+
+
+        <!-- Add a Spinner for gender selection -->
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:hint="Name :"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/GenderSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/Name"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Select Gender"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:entries="@array/gender_options"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+
+        <EditText
+            android:id="@+id/Age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/GenderSpinner"
+            android:layout_marginTop="5dp"
+            android:inputType="number"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="Age :"/>
+
+        <EditText
+            android:id="@+id/Height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Age"
+            android:layout_marginTop="0dp"
+            android:inputType="number"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="Height :"/>
+
+        <EditText
+            android:id="@+id/Weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Height"
+            android:layout_marginTop="0dp"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="Weight :"/>
+
+        <Button
+            android:id="@+id/CalculateBMRButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Weight"
+            android:layout_marginTop="0dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="Calculate BMR"/>
+
+        <Button
+            android:id="@+id/clearBMRButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/Meal6"
+            android:layout_marginTop="1dp"
+            android:backgroundTint="@color/blue"
+            android:layout_centerHorizontal="true"
+            android:hint="Clear " />
+
+
+
+
+        <EditText
+            android:id="@+id/BMRINTAKE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CalculateBMRButton"
+            android:layout_marginTop="0dp"
+            android:inputType="number"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="BMR INTAKE :"/>
+
+
+        <EditText
+            android:id="@+id/NOOFMEALS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/BMRINTAKE"
+            android:layout_marginTop="0dp"
+            android:inputType="number"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:hint="NO OF MEALS :"/>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:id="@+id/Meal1"
+            android:layout_below="@id/NOOFMEALS"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="MEAL1"
+                android:layout_marginRight="1dp"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+
+            <!-- Empty Box 1 -->
+            <EditText
+                android:id="@+id/number4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="proteins value"/>
+
+            <!-- Empty Box 2 -->
+            <EditText
+                android:id="@+id/number5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="carbs value"/>
+
+
+            <!-- Empty Box 3 -->
+            <EditText
+                android:id="@+id/number6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="fats value"/>
+
+            <EditText
+                android:id="@+id/number7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="fruits "/>
+
+            <EditText
+                android:id="@+id/number34"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="vegetables"/>
+            <EditText
+                android:id="@+id/number8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="enter no of calories"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/Meal2"
+            android:layout_below="@id/Meal1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="MEAL2"
+                android:layout_marginRight="1dp"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+
+            <!-- Empty Box 1 -->
+            <EditText
+                android:id="@+id/number9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="proteins value4"/>
+
+
+            <!-- Empty Box 2 -->
+            <EditText
+                android:id="@+id/number10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="carbs value4"/>
+
+
+
+            <!-- Empty Box 3 -->
+            <EditText
+                android:id="@+id/number11"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="fats value4"/>
+
+
+            <EditText
+                android:id="@+id/number12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="fruits"/>
+
+            <EditText
+                android:id="@+id/number35"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="vegetables"/>
+
+
+            <EditText
+                android:id="@+id/number13"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="enter no of calories4"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/Meal2"
+            android:id="@+id/Meal3"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="MEAL3"
+                android:layout_marginRight="1dp"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+
+            <!-- Empty Box 1 -->
+            <EditText
+                android:id="@+id/number14"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="proteins value5"/>
+
+
+            <!-- Empty Box 2 -->
+            <EditText
+                android:id="@+id/number15"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="carbs value5"/>
+
+
+
+            <!-- Empty Box 3 -->
+            <EditText
+                android:id="@+id/number16"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="fats value5"/>
+
+
+            <EditText
+                android:id="@+id/number17"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="fruits"/>
+
+            <EditText
+                android:id="@+id/number36"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="vegetables"/>
+
+            <EditText
+                android:id="@+id/number18"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="enter no of calories5"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/Meal3"
+            android:id="@+id/Meal4"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="MEAL4"
+                android:layout_marginRight="1dp"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+
+            <!-- Empty Box 1 -->
+            <EditText
+                android:id="@+id/number19"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="proteins value1"/>
+
+
+            <!-- Empty Box 2 -->
+            <EditText
+                android:id="@+id/number20"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="carbs value1"/>
+
+
+
+            <!-- Empty Box 3 -->
+            <EditText
+                android:id="@+id/number21"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="fats value1"/>
+
+
+            <EditText
+                android:id="@+id/number22"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="fruits"/>
+
+            <EditText
+                android:id="@+id/number37"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="vegetables"/>
+
+
+            <EditText
+                android:id="@+id/number23"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="enter no of calories1"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/Meal4"
+            android:id="@+id/Meal5"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="MEAL5"
+                android:layout_marginRight="1dp"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+
+            <!-- Empty Box 1 -->
+            <EditText
+                android:id="@+id/number24"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="proteins value2"/>
+
+
+            <!-- Empty Box 2 -->
+            <EditText
+                android:id="@+id/number25"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="carbs value2"/>
+
+
+
+            <!-- Empty Box 3 -->
+            <EditText
+                android:id="@+id/number26"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="fats value2"/>
+
+
+            <EditText
+                android:id="@+id/number27"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="fruits"/>
+
+            <EditText
+                android:id="@+id/number38"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="vegetables"/>
+
+
+            <EditText
+                android:id="@+id/number28"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="enter no of calories2"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/Meal5"
+            android:id="@+id/Meal6"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="MEAL6"
+                android:layout_marginRight="1dp"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+
+            <!-- Empty Box 1 -->
+            <EditText
+                android:id="@+id/number29"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="proteins value3"/>
+
+
+            <!-- Empty Box 2 -->
+            <EditText
+                android:id="@+id/number30"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="carbs value3"/>
+
+
+
+            <!-- Empty Box 3 -->
+            <EditText
+                android:id="@+id/number31"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="fats value3"/>
+
+
+            <EditText
+                android:id="@+id/number32"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="fruits"/>
+
+            <EditText
+                android:id="@+id/number39"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="vegetables"/>
+
+
+            <EditText
+                android:id="@+id/number33"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/border_background"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="enter no of calories3"/>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Proteinfooditems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/clearBMRButton"
+            android:hint="Meal1 Food Items"/>
+
+
+
+        <Spinner
+            android:id="@+id/meal1ProteinSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/Proteinfooditems"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:prompt="@string/Choose_Food_Item"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal1CarbsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal1ProteinSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:prompt="@string/Choose_Food_Item"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal1fatsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal1CarbsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal1fruitsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal1fatsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal1vegetableSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal1fruitsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <TextView
+            android:id="@+id/Carbsfooditems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal1vegetableSpinner"
+            android:hint="Meal2 Food Items"/>
+
+
+        <Spinner
+            android:id="@+id/meal2ProteinSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/Carbsfooditems"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal2CarbsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal2ProteinSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal2fatsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal2CarbsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal2fruitsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal2fatsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal2vegetableSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal2fruitsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+
+        <TextView
+            android:id="@+id/Fatsfooditems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal2vegetableSpinner"
+            android:hint="Meal3 Food Items"/>
+
+
+
+        <Spinner
+            android:id="@+id/meal3ProteinSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/Fatsfooditems"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal3CarbsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal3ProteinSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal3fatsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal3CarbsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal3fruitsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal3fatsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal3vegetableSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal3fruitsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <TextView
+            android:id="@+id/Fruitsfooditems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal3vegetableSpinner"
+            android:hint="Meal4 Food Items"/>
+
+        <Spinner
+            android:id="@+id/meal4ProteinSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/Fruitsfooditems"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal4CarbsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal4ProteinSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal4fatsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal4CarbsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal4fruitsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal4fatsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal4vegetableSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal4fruitsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <TextView
+            android:id="@+id/Veggiefooditems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal4vegetableSpinner"
+            android:hint="Meal5 Food Items"/>
+
+
+
+        <Spinner
+            android:id="@+id/meal5ProteinSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/Veggiefooditems"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal5CarbsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal5ProteinSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal5fatsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal5CarbsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal5fruitsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal5fatsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal5vegetableSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal5fruitsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <TextView
+            android:id="@+id/Allfooditems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal5vegetableSpinner"
+            android:hint="Meal6 Food Items"/>
+
+
+
+        <Spinner
+            android:id="@+id/meal6ProteinSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/Allfooditems"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal6CarbsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal6ProteinSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal6fatsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal6CarbsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal6fruitsSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal6fatsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+
+        <Spinner
+            android:id="@+id/meal6vegetableSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/meal6fruitsSpinner"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:scrollbarSize="20sp"
+            android:scrollbarStyle="insideInset" />
+        <Button
+            android:id="@+id/generatePDF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Generate PDF"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/meal6vegetableSpinner"
+            android:layout_centerHorizontal="true"/>
+
+
+        <TextView
+            android:id="@+id/FoodItemsResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/generatePDF"
+            android:background="@drawable/border_background"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:hint="Meal1 Food Items Percentage Results"/>
+
+        <TextView
+            android:id="@+id/meal1PtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/FoodItemsResults"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal1 Protein Percentage"/>
+
+        <TextView
+            android:id="@+id/meal1CtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal1PtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal1 Carbs Percentage"/>
+
+        <TextView
+            android:id="@+id/meal1FtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal1CtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal1 Fats Percentage"/>
+
+        <TextView
+            android:id="@+id/meal1VtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal1FtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal1 Fruits Percentage"/>
+
+        <TextView
+            android:id="@+id/meal1VVtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal1VtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal1 Vegetables Percentage"/>
+
+        <TextView
+            android:id="@+id/meal2textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal1VVtextViewResult"
+            android:background="@drawable/border_background"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="Meal2 Food Items Percentage Results"/>
+
+        <TextView
+            android:id="@+id/meal2PtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal2textViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal2 Proteins Percentage"/>
+
+        <TextView
+            android:id="@+id/meal2CtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal2PtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal2 Carbs Percentage"/>
+
+        <TextView
+            android:id="@+id/meal2FtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal2CtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal2 Fats Percentage"/>
+
+        <TextView
+            android:id="@+id/meal2VtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal2FtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal2 Fruits Percentage"/>
+
+        <TextView
+            android:id="@+id/meal2VVtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal2VtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal2 Vegetables Percentage"/>
+
+        <TextView
+            android:id="@+id/meal3textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal2VVtextViewResult"
+            android:background="@drawable/border_background"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal3 Food Items Percentage"/>
+
+        <TextView
+            android:id="@+id/meal3PtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal3textViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal3 Proteins Percentage"/>
+
+        <TextView
+            android:id="@+id/meal3CtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal3PtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal3 Carbs Percentage"/>
+
+        <TextView
+            android:id="@+id/meal3FtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal3CtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal3 Fats Percentage"/>
+
+        <TextView
+            android:id="@+id/meal3VtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal3FtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal3 Fruits Percentage"/>
+
+        <TextView
+            android:id="@+id/meal3VVtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal3VtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal3 Vegetables Percentage"/>
+
+        <TextView
+            android:id="@+id/meal4textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal3VVtextViewResult"
+            android:background="@drawable/border_background"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal4 Food Items Percentage"/>
+
+        <TextView
+            android:id="@+id/meal4PtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal4textViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal4 Proteins Percentage"/>
+
+        <TextView
+            android:id="@+id/meal4CtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal4PtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal4 Carbs Percentage"/>
+
+        <TextView
+            android:id="@+id/meal4FtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal4CtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal4 Fats Percentage"/>
+
+        <TextView
+            android:id="@+id/meal4VtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal4FtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal4 Fruits Percentage"/>
+
+        <TextView
+            android:id="@+id/meal4VVtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal4VtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal4 Vegetables Percentage"/>
+
+
+
+        <TextView
+            android:id="@+id/meal5textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal4VVtextViewResult"
+            android:background="@drawable/border_background"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal5 Food Items Percentage"/>
+
+        <TextView
+            android:id="@+id/meal5PtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal5textViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal5 Proteins Percentage"/>
+
+        <TextView
+            android:id="@+id/meal5CtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal5PtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal5 Carbs Percentage"/>
+
+        <TextView
+            android:id="@+id/meal5FtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal5CtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal5 Fats Percentage"/>
+
+        <TextView
+            android:id="@+id/meal5VtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal5FtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal5 Fruits Percentage"/>
+
+        <TextView
+            android:id="@+id/meal5VVtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal5VtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal5 Vegatables Percentage"/>
+
+        <TextView
+            android:id="@+id/meal6textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal5VVtextViewResult"
+            android:background="@drawable/border_background"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal6 Food Items Percentage"/>
+
+        <TextView
+            android:id="@+id/meal6PtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal6textViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal6 Proteins  Percentage"/>
+
+        <TextView
+            android:id="@+id/meal6CtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal6PtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal6 Carbs Percentage"/>
+
+        <TextView
+            android:id="@+id/meal6FtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal6CtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal6 Fats Percentage"/>
+
+        <TextView
+            android:id="@+id/meal6VtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal6FtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal6 Fruits Percentage"/>
+
+        <TextView
+            android:id="@+id/meal6VVtextViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal6VtextViewResult"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="meal6 Vegetables Percentage"/>
+
+
+
+
+        <TextView
+            android:id="@+id/textViewGramsOfProtein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Protein 1"
+            android:layout_below="@id/meal6VVtextViewResult"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal1ProteinGramsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Grams OF Meal1 Protein Food"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/textViewGramsOfProtein"/>
+        <TextView
+            android:id="@+id/textViewGramsOfProtein1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Protein 2 "
+            android:layout_below="@id/meal1ProteinGramsEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal2ProteinGramsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Grams Of Meal2 Protein Food"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/textViewGramsOfProtein1"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfProtein2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Protein 3"
+            android:layout_below="@id/meal2ProteinGramsEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal3ProteinGramsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Grams Of Meal3 Protein Food"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/textViewGramsOfProtein2"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfProtein3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Protein 4 "
+            android:layout_below="@id/meal3ProteinGramsEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal4ProteinGramsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Grams Of Meal4 Protein Food"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/textViewGramsOfProtein3"/>
+        <TextView
+            android:id="@+id/textViewGramsOfProtein4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Protein 5 "
+            android:layout_below="@id/meal4ProteinGramsEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal5ProteinGramsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Grams Of Meal5 Protein Food"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/textViewGramsOfProtein4"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfProtein5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Protein 6 "
+            android:layout_below="@id/meal5ProteinGramsEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal6ProteinGramsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Grams Of Meal6 Protein Food"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/textViewGramsOfProtein5"/>
+
+
+
+        <TextView
+            android:id="@+id/textViewGramsOfCarbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Carbs 1 "
+            android:layout_below="@id/meal6ProteinGramsEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal1CarbsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Enter Grams Of Meal1 Carbs Food"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/textViewGramsOfCarbs"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfCarbs1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Carbs 2 "
+            android:layout_below="@id/meal1CarbsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal2CarbsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Enter Grams Of Meal2 Carbs Food"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/textViewGramsOfCarbs1"/>
+
+
+
+        <TextView
+            android:id="@+id/textViewGramsOfCarbs2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Carbs 3 "
+            android:layout_below="@id/meal2CarbsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal3CarbsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Enter Grams Of Meal3 Carbs Food"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/textViewGramsOfCarbs2"/>
+
+
+        <TextView
+            android:id="@+id/textViewGramsOfCarbs3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Carbs 4 "
+            android:layout_below="@id/meal3CarbsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal4CarbsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Enter Grams Of Meal4 Carbs Food"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/textViewGramsOfCarbs3"/>
+
+
+        <TextView
+            android:id="@+id/textViewGramsOfCarbs4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Carbs 5 "
+            android:layout_below="@id/meal4CarbsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal5CarbsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Enter Grams Of Meal5 Carbs Food"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/textViewGramsOfCarbs4"/>
+
+
+        <TextView
+            android:id="@+id/textViewGramsOfCarbs5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Carbs 6 "
+            android:layout_below="@id/meal5CarbsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal6CarbsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Enter Grams Of Meal6 Carbs Food"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/textViewGramsOfCarbs5"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfFats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Fats 1 "
+            android:layout_below="@id/meal6CarbsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal1FatsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Enter Grams Of Meal1 Fats Food"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/textViewGramsOfFats"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfFats1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Fats 2 "
+            android:layout_below="@id/meal1FatsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal2FatsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Enter Grams Of Meal2 Fats Food"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/textViewGramsOfFats1"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfFats2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Fats 3 "
+            android:layout_below="@id/meal2FatsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal3FatsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Enter Grams Of Meal3 Fats Food"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/textViewGramsOfFats2"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfFats3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Fats 4 "
+            android:layout_below="@id/meal3FatsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal4FatsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Enter Grams Of Meal4 Fats Food"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/textViewGramsOfFats3"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfFats4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Fats 5 "
+            android:layout_below="@id/meal4FatsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal5FatsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Enter Grams Of Meal5 Fats Food"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/textViewGramsOfFats4"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfFats5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Fats 6 "
+            android:layout_below="@id/meal5FatsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal6FatsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Enter Grams Of Meal6 Fats Food"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/textViewGramsOfFats5"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfFruits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Fruits  1 "
+            android:layout_below="@id/meal6FatsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal1FruitsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:hint="Enter Grams Of Meal1 Fruits And Vegetables"
+            android:layout_below="@id/textViewGramsOfFruits"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfFruits1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Fruits  2 "
+            android:layout_below="@id/meal1FruitsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal2FruitsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:hint="Enter Grams Of Meal2 Fruits And Vegetables"
+            android:layout_below="@id/textViewGramsOfFruits1"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfFruits2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Fruits  3 "
+            android:layout_below="@id/meal2FruitsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal3FruitsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:hint="Enter Grams Of Meal3 Fruits And Vegetables"
+            android:layout_below="@id/textViewGramsOfFruits2"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfFruits3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Fruits  4 "
+            android:layout_below="@id/meal3FruitsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal4FruitsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:hint="Enter Grams Of Meal4 Fruits And Vegetables"
+            android:layout_below="@id/textViewGramsOfFruits3"/>
+
+
+
+        <TextView
+            android:id="@+id/textViewGramsOfFruits4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Fruits  5 "
+            android:layout_below="@id/meal4FruitsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal5FruitsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:hint="Enter Grams Of Meal5 Fruits And Vegetables"
+            android:layout_below="@id/textViewGramsOfFruits4"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfFruits5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of Fruits  6 "
+            android:layout_below="@id/meal5FruitsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal6FruitsGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:hint="Enter Grams Of Meal6 Fruits And Vegetables"
+            android:layout_below="@id/textViewGramsOfFruits5"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfVegetables"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of  Vegetables 1 "
+            android:layout_below="@id/meal6FruitsGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal1VegetablesGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:hint="Enter Grams Of Meal1 Fruits And Vegetables"
+            android:layout_below="@id/textViewGramsOfVegetables"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfVegetables1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of  Vegetables 2 "
+            android:layout_below="@id/meal1VegetablesGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal2VegetablesGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:hint="Enter Grams Of Meal2 Fruits And Vegetables"
+            android:layout_below="@id/textViewGramsOfVegetables1"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfVegetables2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of  Vegetables 3 "
+            android:layout_below="@id/meal2VegetablesGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal3VegetablesGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:hint="Enter Grams Of Meal3 Fruits And Vegetables"
+            android:layout_below="@id/textViewGramsOfVegetables2"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfVegetables3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal3VegetablesGramEditText"
+            android:layout_marginTop="8dp"
+            android:text="Grams of  Vegetables 4 "
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/meal4VegetablesGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:hint="Enter Grams Of Meal4 Fruits And Vegetables"
+            android:layout_below="@id/textViewGramsOfVegetables3"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfVegetables4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of  Vegetables 5 "
+            android:layout_below="@id/meal4VegetablesGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal5VegetablesGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:hint="Enter Grams Of Meal5 Fruits And Vegetables"
+            android:layout_below="@id/textViewGramsOfVegetables4"/>
+
+        <TextView
+            android:id="@+id/textViewGramsOfVegetables5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grams of  Vegetables 6 "
+            android:layout_below="@id/meal5VegetablesGramEditText"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/meal6VegetablesGramEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:hint="Enter Grams Of Meal6 Fruits And Vegetables"
+            android:layout_below="@id/textViewGramsOfVegetables5"/>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
