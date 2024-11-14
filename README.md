@@ -40,11 +40,12 @@ flutter run
 Here are some screenshots of the app’s interface:
 
 1. Login Screen
-   
+   https://github.com/user-attachments/assets/c25d9745-e910-441a-abde-f3ee41f4f7fa
 
 3. Personalized Diet Plan
 
 4. Meal Tracking
+   https://github.com/user-attachments/assets/dfef89eb-9185-49cf-8370-c2c75039ba85
 
 
 
