@@ -31,6 +31,7 @@ Run the following command in your terminal:
 bash
 Copy code
 flutter pub get
+
 Run the App
 To run the app on an emulator or connected device:
 
