@@ -36,9 +36,21 @@ To run the app on an emulator or connected device:
 
 flutter run
 
+### App Screenshots
+Here are some screenshots of the app’s interface:
+
+1. Login Screen
+   
+
+3. Personalized Diet Plan
+
+4. Meal Tracking
+
+
+
 ### How to Use
-Create an Account or Log In: Sign up or log in to track your progress and access personalized features.
-Set Your Health Goals: Choose your health goals (e.g., weight loss, muscle gain) and dietary preferences (e.g., vegetarian, keto).
-Get Your Personalized Plan: The app will generate a diet plan tailored to your goals and preferences.
-Track Your Meals: Log your meals to track your nutritional intake and stay on track with your goals.
-View Health Insights: The app provides insights based on your food consumption, helping you make better nutritional choices.
+Create an Account or Log In: Sign up or log in to track your progress and access personalized features.                                           
+Set Your Health Goals: Choose your health goals (e.g., weight loss, muscle gain) and dietary preferences (e.g., vegetarian, keto).                            
+Get Your Personalized Plan: The app will generate a diet plan tailored to your goals and preferences.                                                    
+Track Your Meals: Log your meals to track your nutritional intake and stay on track with your goals.                                                       
+View Health Insights: The app provides insights based on your food consumption, helping you make better nutritional choices.                                    
