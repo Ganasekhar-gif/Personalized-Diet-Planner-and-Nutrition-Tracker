@@ -43,8 +43,9 @@ Here are some screenshots of the app’s interface:
    https://github.com/user-attachments/assets/c25d9745-e910-441a-abde-f3ee41f4f7fa
 
 3. Personalized Diet Plan
+   https://github.com/user-attachments/assets/3971bdf6-8b1b-4a1b-80cc-a723bc6b1a5d
 
-4. Meal Tracking
+5. Meal Tracking
    https://github.com/user-attachments/assets/dfef89eb-9185-49cf-8370-c2c75039ba85
 
 
